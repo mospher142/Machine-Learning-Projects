@@ -1,0 +1,60 @@
+Movie Recomenation System
+
+To build this recomendation system we will use the dataset:
+    - movies.csv
+    - ratings.csv
+================================================================================================
+# Step 1 - Clean and Filter
+
+- Clean the row title from movies.csv 
+- Extract the years from the title and remove it from it and create a new column with the years 
+================================================================================================
+# Step 2 - Compare similar titles and build a search function
+
+For this will we compare how similar a title is related with others
+This can be made by using the TD-IDF using TfidfVectorizer and cosine_similarity
+
+- TfidfVectorizer it will convert the text into numerical values
+- cosine_similarity it will verify how similar the input text and the text from the movie.csv are
+
+To compare the values from the "movies.csv" titles we need to fit the title.
+After that we can build the search function where we will transform the input title inserted and use
+cosine_similarity to find similar titles
+================================================================================================
+# Step 3 - Build the search box
+
+For this it will be used:
+- import ipywidgets as widgets
+- from IPython.display import display
+================================================================================================
+# Step 4 - Find users who liked the same movie
+
+In this step we will find users who liked the same movie as we and after we will search for 
+movies that the same users liked as well
+================================================================================================
+# Step 5 - Find only the movies that greater than 10% of the users who are similar to us liked
+
+This step is important because if we will focus only on what all the users like us had liked we 
+will get a big recomendation list so for that we will filter only what the movies that greater 
+than 10% of the users who are similar to us liked.
+We will select the amount of users from step 4 and we will select the movies that they had rank >= 4
+After we will count the total number of movies that those users had rank >= 4 and divide it by the 
+amount of the total users that had like the same movie has us with a rank >= 4
+Last part is to select the % of movies that were liked by more than 10% of the users
+================================================================================================
+# Step 6 - Finding how much all users like movies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
