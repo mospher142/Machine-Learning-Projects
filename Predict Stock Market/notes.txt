@@ -1,0 +1,15 @@
+
+import yfinance as yf
+
+-> yfinance: Python Library that interacts with the Yahoo Finance API
+
+sp500 = yf.Ticker("^GSPC")
+
+-> .Ticker : allows to get information of a specific financial instrument
+-> ^GSPC: is the symbol for the S&P500 index
+
+sp500 = sp500.history(period="max")
+
+-> history: is used to retrieve historical data for the specified financial instrument
+-> period="max": It specifies the time period for retrive data. "max": retrives the maximum available historical data
+
